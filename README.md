@@ -84,18 +84,7 @@ This repository contains our complete solutions for both tasks of the **AIGOAT 1
 | Server Inference Time | 1.31s |
 | Parameters | 1.06M |
 | **Server Score** | **1.55** |
-| **Leaderboard Rank** | **🥈 #2** |
 
-```
-=== Task 2 Leaderboard ===
- #1  KAFFA                 1.5896
- #2  DataC'EPT             1.5543  ◄ us
- #3  Elada                 1.4545
- #4  No data No science    1.4498
- #5  PPP: PeniParkersPrime 1.4226
-```
-
----
 
 ## Task 1 — Hyperspectral Image Reconstruction from CASSI
 
