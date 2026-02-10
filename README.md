@@ -22,7 +22,7 @@
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Overview](#overview)
 - [Results at a Glance](#results-at-a-glance)
