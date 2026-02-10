@@ -491,16 +491,7 @@ def per_sample_normalize(x):
     return (x - x_min) / (x_max - x_min).clamp(min=1e-6)
 ```
 
-The complete training objective:
-
-\mathcal{L}_{\text{total}} = 
-\underbrace{\text{MSE}(\hat{D}_{\text{norm}}, D^{*}_{\text{norm}})}_{\text{Eval-aligned primary}}
-+ \; 0.2 \cdot
-\underbrace{\|\nabla\hat{D} - \nabla D^{*}\|_1}_{\text{Edge quality}}
-+ \; 0.3 \cdot
-\underbrace{\mathcal{L}_{\text{MS}}}_{\text{Multi-scale}}
-+ \; w(t) \cdot
-\underbrace{\text{MSE}(\hat{D}_{\text{norm}}, D^{\text{teacher}}_{\text{norm}})}_{\text{Curriculum KD}}
+The complete training objective:$$\mathcal{L}_{\text{total}} = \underbrace{\text{MSE}(\hat{D}_{\text{norm}}, D^{*}_{\text{norm}})}_{\text{Eval-aligned primary}} + \; 0.2 \cdot \underbrace{\|\nabla\hat{D} - \nabla D^{*}\|_1}_{\text{Edge quality}} + \; 0.3 \cdot \underbrace{\mathcal{L}_{\text{MS}}}_{\text{Multi-scale}} + \; w(t) \cdot \underbrace{\text{MSE}(\hat{D}_{\text{norm}}, D^{\text{teacher}}_{\text{norm}})}_{\text{Curriculum KD}}$$
 
 | Component | Weight | Purpose |
 |:---|:---:|:---|
