@@ -489,10 +489,14 @@ def per_sample_normalize(x):
     x_min = x_flat.min(dim=1, keepdim=True)[0].view(B, 1, 1)
     x_max = x_flat.max(dim=1, keepdim=True)[0].view(B, 1, 1)
     return (x - x_min) / (x_max - x_min).clamp(min=1e-6)
+```The complete training objective:
+
 ```
-
-The complete training objective:$$\mathcal{L}_{\text{total}} = \underbrace{\text{MSE}(\hat{D}_{\text{norm}}, D^{*}_{\text{norm}})}_{\text{Eval-aligned primary}} + \; 0.2 \cdot \underbrace{\|\nabla\hat{D} - \nabla D^{*}\|_1}_{\text{Edge quality}} + \; 0.3 \cdot \underbrace{\mathcal{L}_{\text{MS}}}_{\text{Multi-scale}} + \; w(t) \cdot \underbrace{\text{MSE}(\hat{D}_{\text{norm}}, D^{\text{teacher}}_{\text{norm}})}_{\text{Curriculum KD}}$$
-
+L_total = MSE(D̂_norm, D*_norm)                      ← eval-aligned primary
+        + 0.2 × L1(∇D̂, ∇D*)                         ← edge quality
+        + 0.3 × L_multiscale                          ← multi-scale structure
+        + w(t) × MSE(D̂_norm, D_teacher_norm)          ← curriculum KD
+```
 | Component | Weight | Purpose |
 |:---|:---:|:---|
 | MSE on normalized pred vs GT | 1.0 | Directly optimizes the metric the server computes |
