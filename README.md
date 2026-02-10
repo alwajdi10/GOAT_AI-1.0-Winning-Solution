@@ -14,7 +14,6 @@
     <img src="https://img.shields.io/badge/Hardware-H100_80GB-76B900?logo=nvidia&logoColor=white" alt="GPU"/>
   </p>
   <p align="center">
-    <img src="https://img.shields.io/badge/Task_2_Rank-🥈_2nd_Place-silver?style=flat-square" alt="Rank"/>
     <img src="https://img.shields.io/badge/Task_2_Score-1.55-gold?style=flat-square" alt="T2 Score"/>
     <img src="https://img.shields.io/badge/Task_1_PSNR-30.66_dB-blue?style=flat-square" alt="T1 PSNR"/>
     <img src="https://img.shields.io/badge/ONNX_Size-4.07_MB-green?style=flat-square" alt="Size"/>
