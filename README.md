@@ -269,7 +269,7 @@ Given a single RGB image $I \in \mathbb{R}^{3 \times 448 \times 448}$, predict a
 
 The scoring function is **multiplicative** across three objectives:
 
-$$\text{Score} = \underbrace{\frac{4}{4 + (10 \cdot \text{RMSE})^2}}_{\text{Accuracy}} \times \underbrace{\frac{50 - \text{Size}_{\text{MB}}}{20}}_{\text{Compactness}} \times \underbrace{0.16 + \log_{10}\!\left(7 - \frac{2}{5.33} \cdot t\right)}_{\text{Speed}}$$
+$$\text{Score} = \underbrace{\frac{4}{4 + (10 \cdot \text{RMSE})^2}}_{\text{Accuracy}} \times \underbrace{\frac{50 - \text{Size}_{\text{MB}}}{20}}_{\text{Compactness}} \times \underbrace{0.16 + \log_{10}\\left(7 - \frac{2}{5.33} \cdot t\right)}_{\text{Speed}}$$
 
 <a name="t2-key-insight"></a>
 ### Key Insight: The Scoring Function Trap
